@@ -1,0 +1,165 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #17251d;
+  background: #edf3ef;
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: min(100% - 2rem, 70rem);
+  margin: 2rem auto 4rem;
+}
+
+h1 {
+  margin-bottom: .35rem;
+}
+
+.lead {
+  color: #54665b;
+  margin-top: 0;
+}
+
+section {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #d4e0d8;
+  border-radius: .9rem;
+  background: #fff;
+  box-shadow: 0 3px 16px #17301d12;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form,
+.actions,
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  align-items: center;
+}
+
+button,
+.button {
+  cursor: pointer;
+  border: 0;
+  border-radius: .5rem;
+  padding: .55rem .8rem;
+  font: inherit;
+  font-weight: 650;
+  background: #146b50;
+  color: #fff;
+  text-decoration: none;
+}
+
+button.secondary,
+.button.secondary {
+  background: #e0e9e4;
+  color: #193126;
+}
+
+button.danger {
+  background: #b42318;
+}
+
+button:disabled {
+  opacity: .55;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: .7rem .45rem;
+  border-bottom: 1px solid #e2e9e4;
+  text-align: left;
+}
+
+th {
+  color: #52625a;
+  font-size: .85rem;
+}
+
+.pager {
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.empty {
+  color: #52625a;
+}
+
+.notice {
+  min-height: 1.5em;
+}
+
+.error {
+  color: #b42318;
+}
+
+.ok {
+  color: #087443;
+}
+
+dialog {
+  width: min(94vw, 55rem);
+  height: min(88svh, 48rem);
+  border: 0;
+  border-radius: .75rem;
+  padding: 1rem;
+  box-shadow: 0 14px 60px #0008;
+}
+
+dialog::backdrop {
+  background: #0008;
+}
+
+.dialog-head {
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#preview-content {
+  width: 100%;
+  height: calc(100% - 2.5rem);
+  border: 0;
+  object-fit: contain;
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow: auto;
+  height: calc(100% - 2.5rem);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  main {
+    width: min(100% - 1rem, 70rem);
+    margin-top: 1rem;
+  }
+
+  section {
+    padding: .85rem;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    display: none;
+  }
+}

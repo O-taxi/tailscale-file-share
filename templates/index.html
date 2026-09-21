@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{APP_TITLE}}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main>
+    <h1>{{APP_TITLE}}</h1>
+    <p class="lead">Tailnet 内限定のファイル共有です。公開用のファイルは <code>data/downloadable</code> に置いてください。</p>
+    <section>
+      <h2>ダウンロード</h2>
+      <div id="downloadable-list"></div>
+    </section>
+    <section>
+      <h2>アップロード</h2>
+      <form id="upload-form"><input id="upload-files" type="file" multiple required><button type="submit">アップロード</button></form>
+      <p id="notice" class="notice" aria-live="polite"></p>
+      <h3>アップロード済み</h3>
+      <div id="uploaded-list"></div>
+    </section>
+  </main>
+  <dialog id="preview-dialog">
+    <div class="dialog-head"><strong id="preview-title"></strong><button id="close-preview" class="secondary" type="button">閉じる</button></div>
+    <div id="preview-area"></div>
+  </dialog>
+  <script src="/static/app.js"></script>
+</body>
+</html>
